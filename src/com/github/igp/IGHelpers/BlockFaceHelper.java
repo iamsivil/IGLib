@@ -2,9 +2,9 @@ package com.github.igp.IGHelpers;
 
 import org.bukkit.block.BlockFace;
 
-public class BlockFaces
+public class BlockFaceHelper
 {
-	private final static BlockFace[] adjacentFaces =
+	private final BlockFace[] adjacentFaces =
 	{
 			BlockFace.UP,
 			BlockFace.DOWN,
@@ -14,12 +14,12 @@ public class BlockFaces
 			BlockFace.WEST
 	};
 
-	public final static BlockFace[] getAdjacentFaces()
+	public final BlockFace[] getAdjacentFaces()
 	{
 		return adjacentFaces;
 	}
 	
-	public final static BlockFace getOppositeFace(BlockFace face)
+	public final BlockFace getOppositeFace(BlockFace face)
 	{
 		if (face.equals(BlockFace.UP))
 			return BlockFace.DOWN;

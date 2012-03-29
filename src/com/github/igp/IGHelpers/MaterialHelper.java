@@ -2,26 +2,9 @@ package com.github.igp.IGHelpers;
 
 import org.bukkit.Material;
 
-public class Materials
+public class MaterialHelper
 {
-/*	private final static Material[] materials = {};
-
-	public final static Material[] getInvalidMaterials()
-	{
-		return materials;
-	}
-
-	public final static Boolean isValidMaterial(final Material material)
-	{
-		for (final Material m : materials)
-		{
-			if (m.equals(material))
-				return false;
-		}
-		return true;
-	}*/
-
-	public final static Boolean isValidBlock(final Material material)
+	public final Boolean isValidBlockMaterial(final Material material)
 	{
 		if (material.isBlock())
 		{
@@ -97,7 +80,7 @@ public class Materials
 		return false;
 	}
 
-	public final static Boolean isValidContainer(final Material material)
+	public final Boolean isValidContainer(final Material material)
 	{
 		if (material.equals(Material.CHEST) || material.equals(Material.DISPENSER) || material.equals(Material.FURNACE) || material.equals(Material.BURNING_FURNACE))
 			return true;
@@ -105,9 +88,10 @@ public class Materials
 		return false;
 	}
 	
-	public final static Material getMaterialFromString(final String s)
+	public final Material getMaterialFromString(String s)
 	{
 		Material material = null;
+		s = s.trim().toUpperCase();
 
 		try
 		{
