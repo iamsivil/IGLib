@@ -87,7 +87,7 @@ public class MaterialHelper
 
 		return false;
 	}
-	
+
 	public final Material getMaterialFromString(String s)
 	{
 		Material material = null;

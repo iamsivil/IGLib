@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.igp</groupId>
   <artifactId>IGHelpers</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.2-SNAPSHOT</version>
   <name>IGHelpers</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -16,6 +16,14 @@
         </configuration>
       </plugin>
     </plugins>
+    <resources>
+        <resource>
+        <directory>src</directory>
+            <includes>
+                <include>*.yml</include>
+            </includes>
+        </resource>
+    </resources>
   </build>
   <scm>
   	<url>https://github.com/IGP/IGHelpers</url>
