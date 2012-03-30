@@ -88,6 +88,14 @@ public class MaterialHelper
 		return false;
 	}
 
+	public final Boolean isValidRail(final Material material)
+	{
+		if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
+			return true;
+		
+		return false;
+	}
+	
 	public final Material getMaterialFromString(String s)
 	{
 		Material material = null;
