@@ -1,26 +1,39 @@
 package com.github.igp.IGHelpers;
 
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 
 public class BlockSetter implements Runnable
 {
-	private final Block block;
-	private final ItemStack stack;
+	private final Location location;
+	private final Material material;
+	private final Byte data;
 
 	public BlockSetter(final Block block, final ItemStack stack)
 	{
-		this.block = block;
-		this.stack = stack;
+		this.location = new Location(block.getLocation().getWorld(), block.getLocation().getBlockX(), block.getLocation().getBlockY(), block.getLocation().getBlockZ());
+		this.material = stack.getType();
+		data = stack.getData().getData();
+	}
+
+	public BlockSetter(final Block block, final Material material)
+	{
+		this.location = new Location(block.getLocation().getWorld(), block.getLocation().getBlockX(), block.getLocation().getBlockY(), block.getLocation().getBlockZ());
+		this.material = material;
+		data = null;
 	}
 
 	@Override
 	public void run()
 	{
-		if ((block == null) || (stack == null))
+		if ((location == null) || (material == null))
 			return;
 
-		block.setType(stack.getType());
-		block.setData(stack.getData().getData());
+		location.getBlock().setType(material);
+
+		if (data != null)
+			location.getBlock().setData(data);
 	}
 }
