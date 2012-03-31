@@ -15,11 +15,14 @@ public class ItemStackDropper implements Runnable
 	{
 		this.location = location;
 		if (stack != null)
-			stacks = new ItemStack[] {stack};
+			stacks = new ItemStack[]
+			{
+				stack
+			};
 		else
 			stacks = null;
 	}
-	
+
 	public ItemStackDropper(final Location location, final ItemStack[] stacks)
 	{
 		this.location = location;
@@ -34,12 +37,12 @@ public class ItemStackDropper implements Runnable
 	{
 		if ((location == null) || (stacks == null))
 			return;
-		
-		for (ItemStack stack : stacks)
+
+		for (final ItemStack stack : stacks)
 		{
 			if ((stack == null) || stack.getType().equals(Material.AIR))
 				continue;
-			
+
 			final Item drop = location.getWorld().dropItem(location, stack);
 			drop.setVelocity(new Vector(0, 0, 0));
 		}

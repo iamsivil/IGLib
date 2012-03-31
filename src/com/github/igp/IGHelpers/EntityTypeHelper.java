@@ -4,7 +4,7 @@ import org.bukkit.entity.EntityType;
 
 public class EntityTypeHelper
 {
-	public boolean isAnimalEntityType(EntityType type)
+	public boolean isAnimalEntityType(final EntityType type)
 	{
 		if (type.equals(EntityType.CHICKEN))
 			return true;
@@ -20,17 +20,17 @@ public class EntityTypeHelper
 			return true;
 		if (type.equals(EntityType.MUSHROOM_COW))
 			return true;
-		//not actual animal
+		// not actual animal
 		if (type.equals(EntityType.SQUID))
 			return true;
-		//not actual animal
+		// not actual animal
 		if (type.equals(EntityType.VILLAGER))
 			return true;
-		
+
 		return false;
 	}
-	
-	public boolean isMonsterEntityType(EntityType type)
+
+	public boolean isMonsterEntityType(final EntityType type)
 	{
 		if (type.equals(EntityType.BLAZE))
 			return true;
@@ -56,10 +56,8 @@ public class EntityTypeHelper
 			return true;
 		if (type.equals(EntityType.ZOMBIE))
 			return true;
-		
+
 		return false;
 	}
-			
-			
-		
+
 }

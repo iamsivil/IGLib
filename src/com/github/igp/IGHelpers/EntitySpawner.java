@@ -19,7 +19,7 @@ public class EntitySpawner implements Runnable
 	{
 		if ((location == null) || (entityType == null))
 			return;
-		
+
 		location.getWorld().spawn(location, entityType.getEntityClass());
 	}
 }

@@ -92,18 +92,18 @@ public class MaterialHelper
 	{
 		if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
 			return true;
-		
+
 		return false;
 	}
-	
+
 	public final boolean isValidVehicleMaterial(final Material material)
 	{
 		if (material.equals(Material.BOAT) || material.equals(Material.MINECART) || material.equals(Material.POWERED_MINECART) || material.equals(Material.STORAGE_MINECART))
 			return true;
-		
+
 		return false;
 	}
-	
+
 	public final Material getMaterialFromString(String s)
 	{
 		Material material = null;

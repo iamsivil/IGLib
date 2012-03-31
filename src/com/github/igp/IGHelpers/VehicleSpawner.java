@@ -23,7 +23,7 @@ public class VehicleSpawner implements Runnable
 	{
 		if ((location == null) || (material == null))
 			return;
-		
+
 		if (material.equals(Material.BOAT))
 			location.getWorld().spawn(location, Boat.class);
 		else if (material.equals(Material.MINECART))
