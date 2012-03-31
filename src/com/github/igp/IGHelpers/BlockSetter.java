@@ -17,6 +17,9 @@ public class BlockSetter implements Runnable
 	@Override
 	public void run()
 	{
+		if ((block == null) || (stack == null))
+			return;
+		
 		block.setType(stack.getType());
 		block.setData(stack.getData().getData());
 	}

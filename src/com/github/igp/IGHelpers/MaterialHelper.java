@@ -4,7 +4,7 @@ import org.bukkit.Material;
 
 public class MaterialHelper
 {
-	public final Boolean isValidBlockMaterial(final Material material)
+	public final boolean isValidBlockMaterial(final Material material)
 	{
 		if (material.isBlock())
 		{
@@ -80,7 +80,7 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final Boolean isValidContainer(final Material material)
+	public final boolean isValidContainerMaterial(final Material material)
 	{
 		if (material.equals(Material.CHEST) || material.equals(Material.DISPENSER) || material.equals(Material.FURNACE) || material.equals(Material.BURNING_FURNACE))
 			return true;
@@ -88,9 +88,17 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final Boolean isValidRail(final Material material)
+	public final boolean isValidRailMaterial(final Material material)
 	{
 		if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
+			return true;
+		
+		return false;
+	}
+	
+	public final boolean isValidVehicleMaterial(final Material material)
+	{
+		if (material.equals(Material.BOAT) || material.equals(Material.MINECART) || material.equals(Material.POWERED_MINECART) || material.equals(Material.STORAGE_MINECART))
 			return true;
 		
 		return false;
