@@ -1,4 +1,4 @@
-package com.github.igp.IGHelpers.Helpers;
+package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;

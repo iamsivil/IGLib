@@ -1,4 +1,4 @@
-package com.github.igp.IGHelpers;
+package com.github.igp.IGLib;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
