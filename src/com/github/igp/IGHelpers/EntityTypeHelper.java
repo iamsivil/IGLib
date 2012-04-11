@@ -4,7 +4,7 @@ import org.bukkit.entity.EntityType;
 
 public class EntityTypeHelper
 {
-	public boolean isAnimalEntityType(final EntityType type)
+	public static boolean isAnimalEntityType(final EntityType type)
 	{
 		if (type.equals(EntityType.CHICKEN))
 			return true;
@@ -30,7 +30,7 @@ public class EntityTypeHelper
 		return false;
 	}
 
-	public boolean isMonsterEntityType(final EntityType type)
+	public static boolean isMonsterEntityType(final EntityType type)
 	{
 		if (type.equals(EntityType.BLAZE))
 			return true;

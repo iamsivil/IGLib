@@ -6,21 +6,14 @@ import org.bukkit.block.BlockFace;
 
 public class BlockHelper
 {
-	private final BlockFaceHelper blockFaceHelper;
-
-	public BlockHelper()
-	{
-		blockFaceHelper = new BlockFaceHelper();
-	}
-
-	public Location getBlockCenter(final Block block)
+	public static Location getBlockCenter(final Block block)
 	{
 		return new Location(block.getWorld(), block.getLocation().getBlockX() + 0.5, block.getLocation().getBlockY() + 0.5, block.getLocation().getBlockZ() + 0.5);
 	}
 
-	public Boolean isBlockPowered(final Block b, final BlockFace ignore)
+	public static Boolean isBlockPowered(final Block b, final BlockFace ignore)
 	{
-		for (final BlockFace face : blockFaceHelper.getAdjacentFaces())
+		for (final BlockFace face : BlockFaceHelper.getAdjacentFaces())
 		{
 			if ((face != null) && face.equals(ignore))
 				continue;

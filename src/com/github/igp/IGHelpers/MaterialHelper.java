@@ -4,7 +4,7 @@ import org.bukkit.Material;
 
 public class MaterialHelper
 {
-	public final boolean isValidBlockMaterial(final Material material)
+	public static boolean isValidBlockMaterial(final Material material)
 	{
 		if (material.isBlock())
 		{
@@ -80,7 +80,7 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final boolean isValidContainerMaterial(final Material material)
+	public static boolean isValidContainerMaterial(final Material material)
 	{
 		if (material.equals(Material.CHEST) || material.equals(Material.DISPENSER) || material.equals(Material.FURNACE) || material.equals(Material.BURNING_FURNACE))
 			return true;
@@ -88,7 +88,7 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final boolean isValidRailMaterial(final Material material)
+	public static boolean isValidRailMaterial(final Material material)
 	{
 		if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
 			return true;
@@ -96,7 +96,7 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final boolean isValidVehicleMaterial(final Material material)
+	public static boolean isValidVehicleMaterial(final Material material)
 	{
 		if (material.equals(Material.BOAT) || material.equals(Material.MINECART) || material.equals(Material.POWERED_MINECART) || material.equals(Material.STORAGE_MINECART))
 			return true;
@@ -104,16 +104,16 @@ public class MaterialHelper
 		return false;
 	}
 
-	public final Material getMaterialFromString(String s)
+	public static Material getMaterialFromString(final String string)
 	{
 		Material material = null;
-		s = s.trim().toUpperCase();
+		final String s = string.trim().toUpperCase();
 
 		try
 		{
 			material = Material.getMaterial(Integer.parseInt(s));
 		}
-		catch (final NumberFormatException ex)
+		catch (final NumberFormatException ignore)
 		{
 		}
 

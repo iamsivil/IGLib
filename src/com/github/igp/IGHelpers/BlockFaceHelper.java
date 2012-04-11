@@ -4,7 +4,7 @@ import org.bukkit.block.BlockFace;
 
 public class BlockFaceHelper
 {
-	private final BlockFace[] adjacentFaces =
+	private static final BlockFace[] adjacentFaces =
 	{
 			BlockFace.UP,
 			BlockFace.DOWN,
@@ -14,12 +14,12 @@ public class BlockFaceHelper
 			BlockFace.WEST
 	};
 
-	public final BlockFace[] getAdjacentFaces()
+	public static BlockFace[] getAdjacentFaces()
 	{
 		return adjacentFaces;
 	}
 
-	public final BlockFace getOppositeFace(final BlockFace face)
+	public static BlockFace getOppositeFace(final BlockFace face)
 	{
 		if (face.equals(BlockFace.UP))
 			return BlockFace.DOWN;
