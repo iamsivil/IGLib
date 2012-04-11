@@ -1,8 +1,9 @@
-package com.github.igp.IGHelpers;
+package com.github.igp.IGHelpers.Helpers;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+
 
 public class BlockHelper
 {

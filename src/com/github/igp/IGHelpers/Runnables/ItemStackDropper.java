@@ -1,4 +1,4 @@
-package com.github.igp.IGHelpers;
+package com.github.igp.IGHelpers.Runnables;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

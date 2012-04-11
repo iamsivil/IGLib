@@ -1,4 +1,4 @@
-package com.github.igp.IGHelpers;
+package com.github.igp.IGHelpers.Helpers;
 
 import org.bukkit.Material;
 
