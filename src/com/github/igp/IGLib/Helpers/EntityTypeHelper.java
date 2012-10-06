@@ -4,60 +4,34 @@ import org.bukkit.entity.EntityType;
 
 public class EntityTypeHelper
 {
-	public static boolean isAnimalEntityType(final EntityType type)
+	public static boolean hasSpawnEgg(final EntityType type)
 	{
-		if (type.equals(EntityType.CHICKEN))
+		switch (type)
+		{
+		case BLAZE:
+		case CAVE_SPIDER:
+		case CHICKEN:
+		case COW:
+		case CREEPER:
+		case ENDERMAN:
+		case GHAST:
+		case MAGMA_CUBE:
+		case MUSHROOM_COW:
+		case OCELOT:
+		case PIG:
+		case PIG_ZOMBIE:
+		case SHEEP:
+		case SILVERFISH:
+		case SKELETON:
+		case SLIME:
+		case SPIDER:
+		case SQUID:
+		case VILLAGER:
+		case WOLF:
+		case ZOMBIE:
 			return true;
-		if (type.equals(EntityType.COW))
-			return true;
-		if (type.equals(EntityType.OCELOT))
-			return true;
-		if (type.equals(EntityType.PIG))
-			return true;
-		if (type.equals(EntityType.SHEEP))
-			return true;
-		if (type.equals(EntityType.WOLF))
-			return true;
-		if (type.equals(EntityType.MUSHROOM_COW))
-			return true;
-		// not actual animal
-		if (type.equals(EntityType.SQUID))
-			return true;
-		// not actual animal
-		if (type.equals(EntityType.VILLAGER))
-			return true;
-
-		return false;
+		default:
+			return false;
+		}
 	}
-
-	public static boolean isMonsterEntityType(final EntityType type)
-	{
-		if (type.equals(EntityType.BLAZE))
-			return true;
-		if (type.equals(EntityType.CAVE_SPIDER))
-			return true;
-		if (type.equals(EntityType.CREEPER))
-			return true;
-		if (type.equals(EntityType.ENDERMAN))
-			return true;
-		if (type.equals(EntityType.GHAST))
-			return true;
-		if (type.equals(EntityType.MAGMA_CUBE))
-			return true;
-		if (type.equals(EntityType.SILVERFISH))
-			return true;
-		if (type.equals(EntityType.SKELETON))
-			return true;
-		if (type.equals(EntityType.SPIDER))
-			return true;
-		if (type.equals(EntityType.PIG_ZOMBIE))
-			return true;
-		if (type.equals(EntityType.SLIME))
-			return true;
-		if (type.equals(EntityType.ZOMBIE))
-			return true;
-
-		return false;
-	}
-
 }
