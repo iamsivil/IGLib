@@ -2,7 +2,7 @@ package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.Material;
 
-@SuppressWarnings("unused")
+@SuppressWarnings("UnusedDeclaration")
 public class MaterialHelper
 {
 	public static boolean isValidBlockMaterial(final Material material)

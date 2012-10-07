@@ -6,6 +6,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
+@SuppressWarnings("UnusedDeclaration")
 public class ItemStackDropper implements Runnable
 {
 	private final Location location;

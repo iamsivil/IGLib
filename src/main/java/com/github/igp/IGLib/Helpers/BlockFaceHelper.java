@@ -2,6 +2,8 @@ package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.block.BlockFace;
 
+
+@SuppressWarnings("WeakerAccess")
 public class BlockFaceHelper
 {
 	private static final BlockFace[] adjacentFaces =

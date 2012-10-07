@@ -7,6 +7,7 @@ import org.bukkit.entity.Minecart;
 import org.bukkit.entity.PoweredMinecart;
 import org.bukkit.entity.StorageMinecart;
 
+@SuppressWarnings("UnusedDeclaration")
 public class VehicleSpawner implements Runnable
 {
 	private final Location location;

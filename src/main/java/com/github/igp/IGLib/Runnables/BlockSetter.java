@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 
+@SuppressWarnings("UnusedDeclaration")
 public class BlockSetter implements Runnable
 {
 	private final Location location;

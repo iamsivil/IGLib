@@ -4,7 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 
-
+@SuppressWarnings("UnusedDeclaration")
 public class BlockHelper
 {
 	public static Location getBlockCenter(final Block block)
