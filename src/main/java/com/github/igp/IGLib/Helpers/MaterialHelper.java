@@ -2,106 +2,112 @@ package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.Material;
 
+@SuppressWarnings("unused")
 public class MaterialHelper
 {
 	public static boolean isValidBlockMaterial(final Material material)
 	{
 		if (material.isBlock())
 		{
-			if (material.equals(Material.REDSTONE_TORCH_ON) || material.equals(Material.REDSTONE_TORCH_OFF))
-				return false;
-			if (material.equals(Material.PISTON_BASE) || material.equals(Material.PISTON_EXTENSION) || material.equals(Material.PISTON_MOVING_PIECE) || material.equals(Material.PISTON_STICKY_BASE))
-				return false;
-			if (material.equals(Material.DISPENSER))
-				return false;
-			if (material.equals(Material.SAPLING))
-				return false;
-			if (material.equals(Material.LONG_GRASS))
-				return false;
-			if (material.equals(Material.DEAD_BUSH))
-				return false;
-			if (material.equals(Material.BED))
-				return false;
-			if (material.equals(Material.BED_BLOCK))
-				return false;
-			if (material.equals(Material.WATER) || material.equals(Material.STATIONARY_WATER))
-				return false;
-			if (material.equals(Material.LAVA) || material.equals(Material.STATIONARY_LAVA))
-				return false;
-			if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
-				return false;
-			if (material.equals(Material.RED_ROSE) || material.equals(Material.YELLOW_FLOWER))
-				return false;
-			if (material.equals(Material.BROWN_MUSHROOM) || material.equals(Material.RED_MUSHROOM))
-				return false;
-			if (material.equals(Material.TORCH))
-				return false;
-			if (material.equals(Material.FIRE))
-				return false;
-			if (material.equals(Material.REDSTONE_WIRE))
-				return false;
-			if (material.equals(Material.CROPS))
-				return false;
-			if (material.equals(Material.FURNACE) || material.equals(Material.BURNING_FURNACE))
-				return false;
-			if (material.equals(Material.SIGN_POST) || material.equals(Material.WALL_SIGN))
-				return false;
-			if (material.equals(Material.WOODEN_DOOR) || material.equals(Material.WOOD_DOOR))
-				return false;
-			if (material.equals(Material.IRON_DOOR) || material.equals(Material.IRON_DOOR_BLOCK))
-				return false;
-			if (material.equals(Material.LADDER))
-				return false;
-			if (material.equals(Material.LEVER))
-				return false;
-			if (material.equals(Material.STONE_BUTTON))
-				return false;
-			if (material.equals(Material.PORTAL))
-				return false;
-			if (material.equals(Material.LOCKED_CHEST))
-				return false;
-			if (material.equals(Material.DIODE_BLOCK_ON) || material.equals(Material.DIODE_BLOCK_OFF))
-				return false;
-			if (material.equals(Material.MONSTER_EGGS))
-				return false;
-			if (material.equals(Material.PUMPKIN_STEM) || material.equals(Material.MELON_STEM))
-				return false;
-			if (material.equals(Material.VINE))
-				return false;
-			if (material.equals(Material.WATER_LILY))
-				return false;
-			if (material.equals(Material.NETHER_WARTS))
-				return false;
-			if (material.equals(Material.ENDER_PORTAL))
-				return false;
-
-			return true;
+			switch (material)
+			{
+				case REDSTONE_TORCH_ON:
+				case REDSTONE_TORCH_OFF:
+				case PISTON_BASE:
+				case PISTON_EXTENSION:
+				case PISTON_MOVING_PIECE:
+				case PISTON_STICKY_BASE:
+				case DISPENSER:
+				case SAPLING:
+				case LONG_GRASS:
+				case DEAD_BUSH:
+				case BED:
+				case BED_BLOCK:
+				case WATER:
+				case STATIONARY_WATER:
+				case LAVA:
+				case STATIONARY_LAVA:
+				case RAILS:
+				case POWERED_RAIL:
+				case DETECTOR_RAIL:
+				case RED_ROSE:
+				case YELLOW_FLOWER:
+				case BROWN_MUSHROOM:
+				case RED_MUSHROOM:
+				case TORCH:
+				case FIRE:
+				case REDSTONE_WIRE:
+				case CROPS:
+				case FURNACE:
+				case BURNING_FURNACE:
+				case SIGN_POST:
+				case WALL_SIGN:
+				case WOODEN_DOOR:
+				case WOOD_DOOR:
+				case IRON_DOOR:
+				case IRON_DOOR_BLOCK:
+				case LADDER:
+				case LEVER:
+				case STONE_BUTTON:
+				case PORTAL:
+				case LOCKED_CHEST:
+				case DIODE_BLOCK_ON:
+				case DIODE_BLOCK_OFF:
+				case MONSTER_EGGS:
+				case PUMPKIN_STEM:
+				case MELON_STEM:
+				case VINE:
+				case WATER_LILY:
+				case NETHER_WARTS:
+				case ENDER_PORTAL:
+					return false;
+				default:
+					return true;
+			}
 		}
 		return false;
 	}
 
 	public static boolean isValidContainerMaterial(final Material material)
 	{
-		if (material.equals(Material.CHEST) || material.equals(Material.DISPENSER) || material.equals(Material.FURNACE) || material.equals(Material.BURNING_FURNACE))
-			return true;
-
-		return false;
+		switch (material)
+		{
+			case CHEST:
+			case DISPENSER:
+			case FURNACE:
+			case BURNING_FURNACE:
+			case ENDER_CHEST:
+				return true;
+			default:
+				return false;
+		}
 	}
 
 	public static boolean isValidRailMaterial(final Material material)
 	{
-		if (material.equals(Material.RAILS) || material.equals(Material.POWERED_RAIL) || material.equals(Material.DETECTOR_RAIL))
-			return true;
-
-		return false;
+		switch (material)
+		{
+			case RAILS:
+			case POWERED_RAIL:
+			case DETECTOR_RAIL:
+				return true;
+			default:
+				return false;
+		}
 	}
 
 	public static boolean isValidVehicleMaterial(final Material material)
 	{
-		if (material.equals(Material.BOAT) || material.equals(Material.MINECART) || material.equals(Material.POWERED_MINECART) || material.equals(Material.STORAGE_MINECART))
-			return true;
-
-		return false;
+		switch (material)
+		{
+			case BOAT:
+			case MINECART:
+			case POWERED_MINECART:
+			case STORAGE_MINECART:
+				return true;
+			default:
+				return false;
+		}
 	}
 
 	public static Material getMaterialFromString(final String string)
