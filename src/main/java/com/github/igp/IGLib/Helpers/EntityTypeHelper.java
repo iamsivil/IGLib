@@ -2,7 +2,6 @@ package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.entity.EntityType;
 
-@SuppressWarnings("UnusedDeclaration")
 public class EntityTypeHelper
 {
 	public static boolean hasSpawnEgg(final EntityType type)

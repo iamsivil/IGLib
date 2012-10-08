@@ -2,8 +2,6 @@ package com.github.igp.IGLib.Helpers;
 
 import org.bukkit.block.BlockFace;
 
-
-@SuppressWarnings("WeakerAccess")
 public class BlockFaceHelper
 {
 	private static final BlockFace[] adjacentFaces =
@@ -19,5 +17,39 @@ public class BlockFaceHelper
 	public static BlockFace[] getAdjacentFaces()
 	{
 		return adjacentFaces;
+	}
+
+	public static BlockFace getRotatePlus90Face(BlockFace face)
+	{
+		switch (face)
+		{
+			case NORTH:
+				return BlockFace.EAST;
+			case EAST:
+				return BlockFace.SOUTH;
+			case SOUTH:
+				return BlockFace.WEST;
+			case WEST:
+				return BlockFace.NORTH;
+			default:
+				return null;
+		}
+	}
+
+	public static BlockFace getRotateNeg90Face(BlockFace face)
+	{
+		switch (face)
+		{
+			case NORTH:
+				return BlockFace.WEST;
+			case WEST:
+				return BlockFace.SOUTH;
+			case SOUTH:
+				return BlockFace.EAST;
+			case EAST:
+				return BlockFace.NORTH;
+			default:
+				return null;
+		}
 	}
 }
