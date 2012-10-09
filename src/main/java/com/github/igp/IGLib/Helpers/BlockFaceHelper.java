@@ -19,6 +19,19 @@ public class BlockFaceHelper
 		return adjacentFaces;
 	}
 
+	private static final BlockFace[] flatAdjacentFaces =
+	{
+			BlockFace.NORTH,
+			BlockFace.EAST,
+			BlockFace.SOUTH,
+			BlockFace.WEST
+	};
+
+	public static BlockFace[] getFlatAdjacentFaces()
+	{
+		return flatAdjacentFaces;
+	}
+
 	public static BlockFace getRotatePlus90Face(BlockFace face)
 	{
 		switch (face)

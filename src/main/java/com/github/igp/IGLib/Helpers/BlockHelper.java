@@ -26,4 +26,24 @@ public class BlockHelper
 
 		return false;
 	}
+
+	public static boolean blockRedstoneRelated(final Block block)
+	{
+		switch (block.getType())
+		{
+			case REDSTONE_WIRE:
+			case REDSTONE_TORCH_ON:
+			case REDSTONE_TORCH_OFF:
+			case LEVER:
+			case WOOD_PLATE:
+			case STONE_PLATE:
+			case DIODE:
+			case DIODE_BLOCK_ON:
+			case DIODE_BLOCK_OFF:
+			case STONE_BUTTON:
+				return true;
+		}
+
+		return false;
+	}
 }
